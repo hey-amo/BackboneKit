@@ -52,7 +52,7 @@ final public class Bank: Banking {
             throw IntegerError.isNegativeValue(amount)
         }
         guard account.balance >= amount else {
-            throw IntegerError.notEnoughFunds
+            throw IntegerError.insufficentFunds
         }
         return true
     }
@@ -72,7 +72,7 @@ final public class Bank: Banking {
         let sum = (account.balance - amount)
         
         guard sum >= 0 else {
-            throw IntegerError.notEnoughFunds
+            throw IntegerError.insufficentFunds
         }
         
         return true

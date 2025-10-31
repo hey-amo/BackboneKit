@@ -9,7 +9,7 @@ import Foundation
 
 public enum IntegerError: Error {
     case isNegativeValue(_ value: Int)
-    case notEnoughFunds
+    case insufficentFunds
 }
 
 extension IntegerError: LocalizedError {
@@ -17,8 +17,8 @@ extension IntegerError: LocalizedError {
         switch self {
         case .isNegativeValue(let value):
             return NSLocalizedString("Value \(value) cannot be negative)", comment: "IntegerError.isNegativeValue")
-        case .notEnoughFunds:
-            return NSLocalizedString("Not enough funds", comment: "IntegerError.notEnoughFunds")
+        case .insufficentFunds:
+            return NSLocalizedString("Insufficent Funds", comment: "IntegerError.insufficentFunds")
         }
     }
 }
